@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bg-img{
+    position: absolute;
+    left: 40%;
+    opacity: 0.1;
+    height: 95%;
+}
+  
+  .modal-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(179, 85, 85, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal {
+    position: relative;
+    z-index: 10;
+    background-color: black;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    max-width: 80%; 
+  }
+
+  .selected-projects {
+    opacity: 0;
+    transform: translateY(-30px); /* Initial position above */
+    animation: slideDown 0.3s ease forwards; /* Animation definition */
+  }
+  
+  .task-anim {
+    opacity: 0;
+    transform: translateY(-20px); /* Initial position above */
+    animation: slideDown 0.3s ease forwards; /* Animation definition */
+  }
+  
+
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-20px); /* Start from above */
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0); /* End at normal position */
+    }
+  }
+
+  .new-project-anim {
+    opacity: 0;
+    transform: translateX(-20px); /* Initial position above */
+    animation: slideRight 0.3s ease forwards; /* Animation definition */
+  }
+  
+
+  @keyframes slideRight {
+    from {
+      opacity: 0;
+      transform: translateX(-20px); /* Start from above */
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0); /* End at normal position */
+    }
+  }
+  
+
+  
+  
